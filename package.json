@@ -8,15 +8,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0",
-    "bootstrap": "^5.1.3",
-    "next": "12.0.7",
-    "node-sass": "^7.0.0",
-    "react": "17.0.2",
-    "react-bootstrap": "^2.0.4",
-    "react-dom": "17.0.2",
-    "sass": "1.3.0",
-    "webpack": "^5.65.0"
+    "bootstrap": "^4.4.1",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "prop-types": "latest"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
