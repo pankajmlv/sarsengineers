@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { ContactForm } from '../components/ContactForm'
-import { MapLocation } from '../components/MapLocation'
 
 const Home: NextPage = () => {
   return (
