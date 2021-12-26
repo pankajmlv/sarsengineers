@@ -10,7 +10,7 @@ export const ContactForm = () => {
   return (
     <div className='row'>
       <form onSubmit={handleSubmit}>
-      <div className="row">
+      <div className="row mb-2">
         <div className='col'>
       <label htmlFor="email" style={{color: '#ffffff', fontWeight: 'bold'}}>
         Email Address
