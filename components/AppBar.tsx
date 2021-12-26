@@ -9,17 +9,19 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import { useRouter } from 'next/router';
 
 const pages = ['Home', 'Products', 'Services','Gallery','About Us'];
 const title = 'The SARAS Engineers';
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const router = useRouter();
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleCloseNavMenu = (event: any) => {
-    console.log(event.currentTarget)
+  const handleCloseNavMenu = (event: any, page: string) => {
     setAnchorElNav(null);
+    router.push('/' + ( page === 'Home' ? '' : page.toLowerCase()));
   };
   return (
     <AppBar position="sticky">
@@ -64,7 +66,7 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={(event) => handleCloseNavMenu(event, page.split(' ')[0])}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -82,7 +84,7 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={(event) => handleCloseNavMenu(event, page.split(' ')[0])}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}

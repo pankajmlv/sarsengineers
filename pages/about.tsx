@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { ContactForm } from '../components/ContactForm'
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <>
     <AppBar/>
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
       
       <main className={styles.main}>  
-      home
+      about
       </main>
     </div>
     <footer className={styles.footer}>
@@ -33,4 +33,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
