@@ -39,7 +39,7 @@ function TabPanel(props: any) {
 
 const useStyles: any = makeStyles({
   root: {
-    flexGrow: 1,
+    flexGrow: 0,
   },
 });
 
