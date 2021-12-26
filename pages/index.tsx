@@ -18,15 +18,13 @@ const Home: NextPage = () => {
     </div>
     <footer className={styles.footer}>
        <div className="row ml-5">
-         <div className="col-4">
+         <div className="col-6 col-md-6">
            <ContactForm/>
          </div>
-         <div className="col-4">
+         <div className="col-6 col-md-6">
            hello
          </div>
-         <div className="col-4">
-           hello
-         </div>
+        
        </div>
     </footer>
     </>

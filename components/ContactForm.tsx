@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 export const ContactForm = () => {
   const [state, handleSubmit] = useForm("xayvnnwa");
   if (state.succeeded) {
-      return <p style={{color: '#ffffff'}}>Thanks for reaching out to us!!</p>;
+      return <p style={{color: '#ffffff', fontWeight: 'bold'}}>Thanks for reaching out to us!!</p>;
   }
   return (
     <div className='row'>
@@ -21,6 +21,7 @@ export const ContactForm = () => {
         id="email"
         type="email" 
         name="email"
+        required
       />
       <ValidationError 
         prefix="Email" 
@@ -40,6 +41,7 @@ export const ContactForm = () => {
         id="message"
         name="message"
         cols={23}
+        required
       />
       <ValidationError 
         prefix="Message" 
