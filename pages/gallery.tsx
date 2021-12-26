@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { ContactForm } from '../components/ContactForm'
+import CenteredTabs from '../components/GalleryTabs'
 
 const Gallery: NextPage = () => {
   return (
@@ -14,7 +15,7 @@ const Gallery: NextPage = () => {
       </Head>
       
       <main className={styles.main}> 
-      gallery 
+      <CenteredTabs/>
       </main>
     </div>
     <footer className={styles.footer}>
