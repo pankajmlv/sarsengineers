@@ -7,19 +7,18 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Home', 'Products', 'Services','Gallery','About Us', 'Contect Us'];
-
+const pages = ['Home', 'Products', 'Services','Gallery','About Us'];
+const title = 'The SARAS Engineers';
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (event: any) => {
+    console.log(event.currentTarget)
     setAnchorElNav(null);
   };
   return (
@@ -32,7 +31,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            The SARS Engineers
+            {title}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -77,7 +76,7 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            The SARS Engineers
+            {title}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
